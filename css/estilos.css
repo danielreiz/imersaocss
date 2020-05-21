@@ -66,7 +66,7 @@ header {
     transition: background-color 1s, color 1s; /*trabalha com o hover*/
   }
   .menu a:hover {
-    background-color: white;
+    background-color: gray;
     color:black;
   }
   a{
@@ -79,13 +79,14 @@ header {
     /*pseudoclasse:ativar quando passar o mouse*/
     text-decoration: underline;
   }
+    .subtitle,
   .site-subtitle,
   .site-title {
     color: black;
     text-align: center;
     
   }
-
+  .subtitle,
   .site-subtitle{
     font-family: 'Press Start 2P', cursive;
     line-height:2em
@@ -180,7 +181,7 @@ text-align: center;
 
   }
   .contato a {
-color: gray;
+color: black;
 font-size: 8em;
 transition: text-shadow 700ms;
 
