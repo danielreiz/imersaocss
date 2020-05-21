@@ -1,16 +1,54 @@
+/*soft reset do css*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-image: url('https://i0.wp.com/post.healthline.com/wp-content/uploads/2019/04/Weed_Orange_1296x728-header-1296x728.jpg?w=1155&h=1528');
-    background-size: 100vh; /*pode-se usar px tbm, mas vh é melhor pq é relativo. lembrar auto*/
+    /*background-image: url('https://i0.wp.com/post.healthline.com/wp-content/uploads/2019/04/Weed_Orange_1296x728-header-1296x728.jpg?w=1155&h=1528');*/
+
+    background-image: url('https://previews.123rf.com/images/skunkeye/skunkeye1512/skunkeye151200195/49352989-ganja-weed-marijuana-seamless-vector-pattern-background.jpg');
+    
+    background-size: 90vh; /*pode-se usar px tbm, mas vh é melhor pq é relativo. lembrar auto*/
     font-family: "Comic Sans MS";
     height: 100vh;
+    font-size: 13px;
   }
+
+  /*condição if para a tela
+  para telas com pelo menos 400*/
+  @media (min-width: 400px) {
+    body {
+      font-size: 14px;
+    }
+
+  }
+
+  @media (min-width: 600px){
+    body{
+      font-size: 18px;
+    }
+  }
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
   .menu {
     /*selecionando todos os elementos que tem na classe menu*/
-    background-color: gray; 
+    background-color: black; 
+    position: fixed;
+    width: 100vw;
+    z-index: 1; /*prioridade no eixo z*/
+    
+    top: 0; /*posiciona o menu. so funciona se o position estiver declarado*/
   }
   
   .menu li {
-   /* seletor hierárquico
+       /* seletor hierárquico
     todas as lis q tiverem dentro de um elemento dentro de uma classe menu receberá um estilo*/
     list-style: none;
   }
@@ -18,10 +56,22 @@ body {
     display: flex;
     justify-content: space-around;
   }
-  
+
+  .menu a {
+  /*aumentando a área de clique do menu
+    atribui block ao display para o padding funcionar*/
+    display: block;
+    padding: 10px 40px; /*cria uma borda*/ 
+    background: black;
+    transition: background-color 1s, color 1s; /*trabalha com o hover*/
+  }
+  .menu a:hover {
+    background-color: white;
+    color:black;
+  }
   a{
     text-decoration: none; 
-    color: red;
+    color: blue;
     font-weight: bold;
     /*tirando o underline*/
   }
@@ -31,7 +81,113 @@ body {
   }
   .site-subtitle,
   .site-title {
-    color: whitesmoke;
+    color: black;
     text-align: center;
+    
+  }
+
+  .site-subtitle{
+    font-family: 'Press Start 2P', cursive;
+    line-height:2em
+  }
+
+  .site-title{
+    font-size: 4em;
+    font-family: 'Comfortaa', cursive;
+  }
+  .sobre,
+  .contato,
+  .portfolio {
+
+padding: 2em; /*define uma a distância entre o conteúdo de um elemento e suas bordas. É um atalho que evita definir uma distância para cada lado separadamente*/
+min-height: 100vh;
+margin-left:auto;
+margin-right: auto;
+  }
+  @media (min-width:1200px){
+    .sobre,
+    .contato,
+    .portfolio {
+      max-width: 1200px;
+    }
+  }
+  
+  .sobre h2,
+  .contato h2,
+  .portfolio h2 {
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 2em; /*margem para baixo*/
+    margin-top: 1.5em;
+  }
+
+  .sobre p{
+    color:black;
+    text-indent: 1.4em;
+    margin-bottom: 1.4em;
+    text-align: justify;
+  }
+
+  .sobre .avatar {
+    float: right;
+    margin-left: 2em;
+  }
+
+  /* .sobre .avatar img {
+    border-radius: 100%; se eu quisesse arredondar a imagem
+    cli-path tbm serve para mudar a forma da imagem*/
+  
+
+  .portfolio .grid {/*seleciona todos elementos com a classe grid que estao dentro de outro elemento que tem a classe portfolio*/
+    display:grid; /*torna os elementos um grid container. parecido com o display:flex, mas sem transformar em colunas
+    grid traz mais controle de quantidade*/
+    gap: 1.5em;
+    
+
+  }
+
+  @media (min-width: 535px) {
+    .portfolio .grid{
+      grid-template-columns: 220px 220px;
+
+    }
+  }
+
+  @media (min-width: 870px) {
+    .portfolio .grid{
+      grid-template-columns: repeat(3, 220px);
+      justify-content: center;
+
+    }
+  }
+  .portfolio figure {
+    text-align: center;
+  }
+  .img-portfolio{
+    height: 190px;
+    width: 220px;
+    object-fit: cover; /*imagem sem deformar*/
+    object-position: top;
+    border-radius:10px; /*borda*/
+    transition:transform 500ms; 
+  }
+
+  .img-portfolio:hover{
+    transform: scale(1.2); /*aumenta a imagem quando passa o mouse*/
+
+  }
+  .contato .icons {
+text-align: center;
+
+  }
+  .contato a {
+color: gray;
+font-size: 8em;
+transition: text-shadow 700ms;
+
+  }
+.contato a:active, /*resposta do touch no celular*/
+  .contato a:hover {
+    text-decoration: none;
+    text-shadow: 0px 0px 10px blue;
   }
   

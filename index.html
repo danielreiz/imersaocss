@@ -2,24 +2,88 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>danialvezzz</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Kalam&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1f49b7c63a.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header> <!--tag de cabeçalho-->
         <nav class="menu">
           <ul> <!--uma lista desordenada-->
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Portfólio</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#contato">Contato</a></li>
             <!--nav (navigation) = uma seção da pagina que aponta para outras
                 li = lista de itens
                 a = cria um hyperlink com o atributo href-->
           </ul>
         </nav>
-        <h1 class="site-title">CANNABIS</h1>
-        <!--header de importancia 1, a maior de todas-->
-        <h2 class="site-subtitle">weed</h2>
+        <div>
+            <h1 class="site-title">DANIEL REIS</h1>
+            <!--header de importancia 1, a maior de todas-->
+            <h2 class="site-subtitle">life procrastinator</h2>
+        </div>
+       
       </header>
+      <section class="sobre" id="sobre">
+          <h2>sobre</h2>
+
+          <figure class="avatar">
+              <img src="https://s3-sa-east-1.amazonaws.com/imgs.iarremate/artistas/art-12270/imagens/mr6TbKHS.300x300.jpg" alt="">
+          </figure>
+
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, alias eligendi! Libero corrupti iure sint adipisci eius! Cumque, placeat distinctio tempora eos odio obcaecati velit laborum voluptate, nisi saepe aspernatur!</p>
+
+          <p>Earum natus consectetur quo fugit ex, sequi velit placeat! Earum, fugit enim. Nisi maxime perspiciatis error neque veniam iusto quas quaerat quod officia ratione delectus, incidunt odio, nam autem nesciunt.</p>
+
+          <p>Dolor, perferendis! Quidem velit quas deleniti asperiores, voluptatum voluptatibus blanditiis architecto molestias minima non neque modi qui eligendi! Est neque eligendi, ipsa ullam nihil distinctio qui reiciendis laborum nisi atque?</p>
+
+          <p>Esse site foi construído durante a <a href="https://www.alura.com.br/imersao-css">Imersão CSS da Alura</a>.</p>
+
+      </section>
+      <section class="portfolio" id="portfolio">
+          <h2>portfolio</h2>
+
+          <div class="grid">
+
+            <figure>
+                <img class="img-portfolio" src="./img/gregore.jpg" alt="Gregore">
+                <!--<figcaption>Gregore</figcaption>-->
+            </figure>
+            <figure>
+                <img class="img-portfolio" src="./img/snoop.jpg" alt="Snoop Dogg">
+                <!--<figcaption>Gregore</figcaption>-->
+            </figure>
+            <figure>
+                <img class="img-portfolio" src="./img/bobo.jpg" alt="Bobô">
+                <!--<figcaption>Gregore</figcaption>-->
+            </figure>
+
+          </div> <!--Container: Sempre que eu precisar de algo para o layout e que nao tiver uma semantica ou significado, eu crio uma div-->
+
+         
+      </section>
+
+      <section class="contato" id="contato"> <!--#id serve como ancora para paginas-->
+          <h2>Contato</h2>
+          <div class="grid icons">
+            <a target="_blank" href="lastfm.com/user/DanielECB">
+                <i class="fab fa-lastfm-square"></i>
+                </a>
+            <a target="_blank" href="twitter.com/danielalvezzz">
+                <i class="fab fa-twitter-square"></i>
+                    </a>
+            <a target="_blank" href="github.com/danielreiz">
+                <i class="fab fa-github-square"></i>
+                        </a>
+            <a target="_blank" href="linkedin.com">
+                <i class="fab fa-linkedin-in"></i>
+                            </a>
+          </div>
+
+
+      </section>
 </body>
 </html>
