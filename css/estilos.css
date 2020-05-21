@@ -79,14 +79,14 @@ header {
     /*pseudoclasse:ativar quando passar o mouse*/
     text-decoration: underline;
   }
-    .subtitle,
+  .subtitle2,
   .site-subtitle,
   .site-title {
     color: black;
     text-align: center;
     
   }
-  .subtitle,
+  .subtitle2,
   .site-subtitle{
     font-family: 'Press Start 2P', cursive;
     line-height:2em
@@ -142,6 +142,7 @@ margin-right: auto;
     display:grid; /*torna os elementos um grid container. parecido com o display:flex, mas sem transformar em colunas
     grid traz mais controle de quantidade*/
     gap: 1.5em;
+
     
 
   }
@@ -149,19 +150,24 @@ margin-right: auto;
   @media (min-width: 535px) {
     .portfolio .grid{
       grid-template-columns: 220px 220px;
-
     }
-  }
+    }
+    
 
   @media (min-width: 870px) {
     .portfolio .grid{
       grid-template-columns: repeat(3, 220px);
       justify-content: center;
-
+    }
+    .portfolio h2 {
+      margin-bottom: 6em;
     }
   }
   .portfolio figure {
     text-align: center;
+   
+    
+    
   }
   .img-portfolio{
     height: 190px;
@@ -170,6 +176,9 @@ margin-right: auto;
     object-position: top;
     border-radius:10px; /*borda*/
     transition:transform 500ms; 
+   
+    
+   
   }
 
   .img-portfolio:hover{
@@ -180,6 +189,23 @@ margin-right: auto;
 text-align: center;
 
   }
+
+  @media (min-width: 463px) {
+    .contato .icons {
+      display:grid;
+      grid-template-columns: repeat(2, 220px);
+      justify-content: center;
+    }
+  }
+
+  @media (min-width: 780px) {
+    .contato .icons {
+      display:grid;
+      grid-template-columns: repeat(4, 220px);
+      justify-content: center;
+    }
+  }
+
   .contato a {
 color: black;
 font-size: 8em;
